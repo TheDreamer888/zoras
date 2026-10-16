@@ -1,0 +1,6 @@
+logs/
+*.log
+.cloudflared/
+.DS_Store
+Thumbs.db
+node_modules/

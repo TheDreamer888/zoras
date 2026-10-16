@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ZoraS</title>
+<meta name="description" content="Auditoria de seguranca para aplicacoes feitas com IA e assistentes de WhatsApp. Lisboa, Portugal.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2.2 3.6 5.6v6.1c0 5 3.6 8.8 8.4 10.1 4.8-1.3 8.4-5.1 8.4-10.1V5.6Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"></path>
+        <path d="M8.6 9.3h6.8l-6.8 5.4h6.8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      ZoraS
+    </a>
+    <nav class="site-nav">
+      <a href="#servicos" data-pt="Serviços" data-en="Services">Serviços</a>
+      <a href="#precos" data-pt="Preços" data-en="Pricing">Preços</a>
+      <a href="#trabalho" data-pt="Trabalho" data-en="Work">Trabalho</a>
+      <a href="#contacto" data-pt="Contacto" data-en="Contact">Contacto</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" id="btn-pt" aria-pressed="true">PT</button>
+      <button type="button" id="btn-en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow" data-pt="Lisboa, Portugal" data-en="Lisbon, Portugal">Lisboa, Portugal</span>
+        <h1 data-pt="Segurança e automação para quem constrói depressa."
+            data-en="Security and automation for people who build fast.">Segurança e automação para quem constrói depressa.</h1>
+        <p class="lede"
+           data-pt="A ZoraS audita aplicações feitas com IA e constrói assistentes de WhatsApp que respondem a clientes e marcam serviços. Dois serviços, preço fixo, prazo escrito."
+           data-en="ZoraS audits AI-built applications and builds WhatsApp assistants that answer clients and book appointments. Two services, fixed price, a deadline in writing.">A ZoraS audita aplicações feitas com IA e constrói assistentes de WhatsApp que respondem a clientes e marcam serviços. Dois serviços, preço fixo, prazo escrito.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#contacto" data-pt="Pedir auditoria" data-en="Request an audit">Pedir auditoria</a>
+          <a class="btn ghost" href="#servicos" data-pt="Ver serviços" data-en="See services">Ver serviços</a>
+        </div>
+      </div>
+      <div class="scan" aria-hidden="true">
+        <div class="scan-head">
+          <span>vibeguard --scan</span>
+          <span data-pt="exemplo" data-en="example">exemplo</span>
+        </div>
+        <div class="scan-row"><span class="k">api keys exposed</span><span class="v flag">2 found</span></div>
+        <div class="scan-row"><span class="k">sql injection</span><span class="v">0</span></div>
+        <div class="scan-row"><span class="k">xss</span><span class="v flag">1 found</span></div>
+        <div class="scan-row"><span class="k">tls config</span><span class="v">ok</span></div>
+        <div class="scan-row"><span class="k">jwt verification</span><span class="v flag">weak</span></div>
+        <div class="scan-row"><span class="k">dependencies</span><span class="v">ok</span></div>
+        <div class="scan-row"><span class="k">report</span><span class="v">3 days</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <div class="wrap band">
+      <span class="eyebrow" data-pt="O que fazemos" data-en="What we do">O que fazemos</span>
+      <h2 style="font-size:clamp(1.6rem,3.6vw,2.2rem);letter-spacing:-0.02em"
+          data-pt="Dois serviços, feitos a sério." data-en="Two services, done properly.">Dois serviços, feitos a sério.</h2>
+      <div class="svc-grid">
+
+        <article class="svc">
+          <h3>VibeGuard</h3>
+          <p data-pt="Fizeste a app ou o site com Cursor, Lovable, Bolt ou ChatGPT? A IA escreve código depressa, mas deixa buracos. Encontro-os antes de outra pessoa os encontrar."
+             data-en="Built your app or site with Cursor, Lovable, Bolt or ChatGPT? AI writes code fast, but it leaves holes. I find them before someone else does.">Fizeste a app ou o site com Cursor, Lovable, Bolt ou ChatGPT? A IA escreve código depressa, mas deixa buracos. Encontro-os antes de outra pessoa os encontrar.</p>
+          <ul>
+            <li data-pt="Chaves de API e segredos expostos" data-en="Exposed API keys and secrets">Chaves de API e segredos expostos</li>
+            <li data-pt="SQL injection e XSS" data-en="SQL injection and XSS">SQL injection e XSS</li>
+            <li data-pt="TLS desativado ou mal configurado" data-en="Disabled or misconfigured TLS">TLS desativado ou mal configurado</li>
+            <li data-pt="Autenticação JWT mal verificada" data-en="Weak or unverified JWT authentication">Autenticação JWT mal verificada</li>
+            <li data-pt="Relatório com a correção de cada problema, mais chamada de 30 minutos" data-en="A report with the fix for every issue, plus a 30-minute call">Relatório com a correção de cada problema, mais chamada de 30 minutos</li>
+          </ul>
+          <div class="foot" data-pt="3 dias úteis · o teu código é apagado após a entrega" data-en="3 business days · your code is deleted after delivery">3 dias úteis · o teu código é apagado após a entrega</div>
+        </article>
+
+        <article class="svc">
+          <h3>ZapAgent</h3>
+          <p data-pt="Um assistente de WhatsApp que responde aos teus clientes 24 horas por dia e marca dentro do teu horário, sem sobreposições. Preços e marcações seguem regras fixas: o assistente nunca inventa preços."
+             data-en="A WhatsApp assistant that answers your clients around the clock and books inside your opening hours, with no double bookings. Prices and bookings follow fixed rules: the assistant never invents a price.">Um assistente de WhatsApp que responde aos teus clientes 24 horas por dia e marca dentro do teu horário, sem sobreposições. Preços e marcações seguem regras fixas: o assistente nunca inventa preços.</p>
+          <ul>
+            <li data-pt="Configurado com os teus serviços, preços, horário e perguntas frequentes" data-en="Set up with your services, prices, opening hours and FAQs">Configurado com os teus serviços, preços, horário e perguntas frequentes</li>
+            <li data-pt="Ligação à WhatsApp Cloud API oficial da Meta" data-en="Connected to Meta's official WhatsApp Cloud API">Ligação à WhatsApp Cloud API oficial da Meta</li>
+            <li data-pt="Alojamento, monitorização e suporte por mensalidade" data-en="Hosting, monitoring and support on a monthly plan">Alojamento, monitorização e suporte por mensalidade</li>
+            <li data-pt="Para salões, clínicas, ginásios e restaurantes" data-en="For salons, clinics, gyms and restaurants">Para salões, clínicas, ginásios e restaurantes</li>
+          </ul>
+          <div class="foot" data-pt="5 dias úteis · precisas de uma conta Meta Business, eu ajudo a criar" data-en="5 business days · you need a Meta Business account, I help you create it">5 dias úteis · precisas de uma conta Meta Business, eu ajudo a criar</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="precos">
+    <div class="wrap band">
+      <span class="eyebrow" data-pt="Preços" data-en="Pricing">Preços</span>
+      <h2 style="font-size:clamp(1.6rem,3.6vw,2.2rem);letter-spacing:-0.02em"
+          data-pt="Sem orçamentos por email." data-en="No quotes by email.">Sem orçamentos por email.</h2>
+      <p class="lede" style="margin-top:12px"
+         data-pt="O preço está aqui. Se o trabalho não for possível, devolvo o valor na totalidade."
+         data-en="The price is right here. If the work turns out not to be possible, you get a full refund.">O preço está aqui. Se o trabalho não for possível, devolvo o valor na totalidade.</p>
+
+      <div class="price-wrap">
+        <table class="price">
+          <thead>
+            <tr>
+              <th data-pt="Serviço" data-en="Service">Serviço</th>
+              <th data-pt="Preço" data-en="Price">Preço</th>
+              <th data-pt="Detalhe" data-en="Detail">Detalhe</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="what">VibeGuard</td>
+              <td class="amount">24,90 €</td>
+              <td class="note" data-pt="Auditoria completa, uma vez. Relatório em 3 dias úteis." data-en="Full audit, one-off. Report within 3 business days.">Auditoria completa, uma vez. Relatório em 3 dias úteis.</td>
+            </tr>
+            <tr>
+              <td class="what" data-pt="ZapAgent — instalação" data-en="ZapAgent — setup">ZapAgent — instalação</td>
+              <td class="amount">59,00 €</td>
+              <td class="note" data-pt="Configuração e entrega a funcionar, uma vez." data-en="Configured and delivered working, one-off.">Configuração e entrega a funcionar, uma vez.</td>
+            </tr>
+            <tr>
+              <td class="what" data-pt="ZapAgent — mensalidade" data-en="ZapAgent — monthly">ZapAgent — mensalidade</td>
+              <td class="amount">14,90 €<span style="font-size:0.8rem;font-weight:500">/mês</span></td>
+              <td class="note" data-pt="Alojamento, monitorização e suporte. Sem fidelização." data-en="Hosting, monitoring and support. No lock-in.">Alojamento, monitorização e suporte. Sem fidelização.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="price-foot"
+         data-pt="Valores em euros, com IVA incluído quando aplicável. A WhatsApp Cloud API da Meta pode cobrar por conversa, segundo a tabela da própria Meta."
+         data-en="Prices in euros, VAT included where applicable. Meta's WhatsApp Cloud API may charge per conversation, according to Meta's own pricing.">Valores em euros, com IVA incluído quando aplicável. A WhatsApp Cloud API da Meta pode cobrar por conversa, segundo a tabela da própria Meta.</p>
+    </div>
+  </section>
+
+  <section id="trabalho">
+    <div class="wrap band">
+      <span class="eyebrow" data-pt="Trabalho" data-en="Work">Trabalho</span>
+      <h2 style="font-size:clamp(1.6rem,3.6vw,2.2rem);letter-spacing:-0.02em"
+          data-pt="O que já está construído." data-en="What is already built.">O que já está construído.</h2>
+      <div class="work-grid">
+
+        <article class="work">
+          <h3>NEXUS GUARDIAN</h3>
+          <p data-pt="Monitorização de segurança com análise de vulnerabilidades assistida por IA e alertas por Telegram. Agendamento adaptado ao CPU, para correr em segundo plano sem pesar na máquina."
+             data-en="Security monitoring with AI-assisted vulnerability analysis and Telegram alerts. CPU-aware scheduling, so it runs in the background without weighing the machine down.">Monitorização de segurança com análise de vulnerabilidades assistida por IA e alertas por Telegram. Agendamento adaptado ao CPU, para correr em segundo plano sem pesar na máquina.</p>
+          <div class="chips"><span class="chip">Python</span><span class="chip">psutil</span><span class="chip">Telegram API</span></div>
+        </article>
+
+        <article class="work">
+          <h3>WebSaveProtect</h3>
+          <p data-pt="Plataforma SaaS de segurança por subscrição, com análise multi-motor e orquestração de IA. Cifragem AES-256-GCM e ChaCha20-Poly1305."
+             data-en="Subscription SaaS security platform with multi-engine scanning and AI orchestration. AES-256-GCM and ChaCha20-Poly1305 encryption.">Plataforma SaaS de segurança por subscrição, com análise multi-motor e orquestração de IA. Cifragem AES-256-GCM e ChaCha20-Poly1305.</p>
+          <div class="chips"><span class="chip">FastAPI</span><span class="chip">Python</span><span class="chip">ARM64</span></div>
+        </article>
+
+        <article class="work">
+          <h3>SaasBase</h3>
+          <p data-pt="Backend SaaS em .NET com proteção contra brute-force, JWT com jti e integridade de dados reforçada por chaves estrangeiras explícitas."
+             data-en="A .NET SaaS backend with brute-force protection, JWT with jti claims and data integrity enforced by explicit foreign keys.">Backend SaaS em .NET com proteção contra brute-force, JWT com jti e integridade de dados reforçada por chaves estrangeiras explícitas.</p>
+          <div class="chips"><span class="chip">C# / .NET</span><span class="chip">EF Core</span><span class="chip">PostgreSQL</span></div>
+        </article>
+
+        <article class="work">
+          <h3>NEXUS EDU</h3>
+          <p data-pt="Plataforma multilingue que junta conteúdo educativo, chatbots de IA por disciplina e funcionalidades de cibersegurança, com .NET como backend principal."
+             data-en="A multilingual platform combining educational content, per-subject AI chatbots and cybersecurity features, with .NET as the main backend.">Plataforma multilingue que junta conteúdo educativo, chatbots de IA por disciplina e funcionalidades de cibersegurança, com .NET como backend principal.</p>
+          <div class="chips"><span class="chip">Rust / Axum</span><span class="chip">.NET</span><span class="chip">PostgreSQL</span></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contact">
+    <div class="wrap band contact-grid">
+      <div>
+        <span class="eyebrow" data-pt="Contacto" data-en="Contact">Contacto</span>
+        <h2 style="font-size:clamp(1.6rem,3.6vw,2.2rem);letter-spacing:-0.02em"
+            data-pt="Diz o que precisas." data-en="Tell me what you need.">Diz o que precisas.</h2>
+        <p class="lede" style="margin-top:12px"
+           data-pt="Respondo em 24 horas em dias úteis. Se o teu caso não for para mim, digo-te logo e indico outro caminho."
+           data-en="I reply within 24 hours on business days. If your case isn't for me, I'll say so straight away and point you elsewhere.">Respondo em 24 horas em dias úteis. Se o teu caso não for para mim, digo-te logo e indico outro caminho.</p>
+
+        <div class="direct">
+          <div class="direct-row">
+            <span class="lbl">Email</span>
+            <span class="val" id="email-val">c792389@gmail.com</span>
+            <button type="button" class="copy" id="copy-email" data-pt="Copiar" data-en="Copy">Copiar</button>
+          </div>
+          <div class="direct-row">
+            <span class="lbl" data-pt="Base" data-en="Based in">Base</span>
+            <span class="val">Lisboa, Portugal · UTC+00/+01</span>
+          </div>
+        </div>
+      </div>
+
+      <form id="lead-form" novalidate>
+        <div class="field">
+          <label for="f-name" data-pt="Nome" data-en="Name">Nome</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required
+                 data-pt-ph="O teu nome" data-en-ph="Your name" placeholder="O teu nome">
+        </div>
+        <div class="field">
+          <label for="f-email" data-pt="Email" data-en="Email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required
+                 data-pt-ph="para onde respondo" data-en-ph="where I should reply" placeholder="para onde respondo">
+        </div>
+        <div class="field">
+          <label for="f-service" data-pt="Serviço" data-en="Service">Serviço</label>
+          <select id="f-service" name="service">
+            <option value="vibeguard" data-pt="VibeGuard — auditoria de segurança" data-en="VibeGuard — security audit">VibeGuard — auditoria de segurança</option>
+            <option value="zapagent" data-pt="ZapAgent — assistente de WhatsApp" data-en="ZapAgent — WhatsApp assistant">ZapAgent — assistente de WhatsApp</option>
+            <option value="ambos" data-pt="Os dois" data-en="Both">Os dois</option>
+            <option value="outro" data-pt="Outro assunto" data-en="Something else">Outro assunto</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-msg" data-pt="Mensagem" data-en="Message">Mensagem</label>
+          <textarea id="f-msg" name="message" required
+                    data-pt-ph="O que tens construído e onde precisas de ajuda."
+                    data-en-ph="What you have built and where you need help."
+                    placeholder="O que tens construído e onde precisas de ajuda."></textarea>
+        </div>
+        <button class="btn" type="submit" id="f-submit" data-pt="Preparar mensagem" data-en="Prepare message">Preparar mensagem</button>
+        <p class="status" id="f-status" hidden></p>
+
+        <div class="field" id="f-out-wrap" hidden>
+          <label for="f-out" data-pt="Mensagem pronta" data-en="Message ready">Mensagem pronta</label>
+          <textarea id="f-out" readonly rows="9"></textarea>
+          <button type="button" class="copy" id="copy-msg" style="justify-self:start"
+                  data-pt="Copiar mensagem" data-en="Copy message">Copiar mensagem</button>
+        </div>
+
+        <p class="form-note" id="f-note"
+           data-pt="Os teus dados são usados apenas para responder a este pedido."
+           data-en="Your details are used only to answer this request.">Os teus dados são usados apenas para responder a este pedido.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot-row">
+      <span data-pt="ZoraS · Lisboa, Portugal" data-en="ZoraS · Lisbon, Portugal">ZoraS · Lisboa, Portugal</span>
+      <span data-pt="VibeGuard e ZapAgent são serviços ZoraS." data-en="VibeGuard and ZapAgent are ZoraS services.">VibeGuard e ZapAgent são serviços ZoraS.</span>
+    </div>
+  </footer>
+
+</main>
+<script src="/app.js" defer></script>
+</body>
+</html>
