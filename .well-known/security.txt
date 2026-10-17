@@ -1,0 +1,11 @@
+# Como comunicar uma vulnerabilidade na ZoraS
+# RFC 9116 — https://www.rfc-editor.org/rfc/rfc9116
+
+Contact: mailto:c792389@gmail.com
+Expires: 2027-10-17T00:00:00.000Z
+Preferred-Languages: pt, en
+Canonical: https://zorastech.com/.well-known/security.txt
+
+# Se encontrares uma falha neste site ou nos serviços da ZoraS,
+# escreve-nos. Respondemos em 72 horas.
+# Pedimos que não divulgues publicamente antes de termos corrigido.
