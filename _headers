@@ -13,10 +13,10 @@
   Cache-Control: no-cache
 
 /style.css
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=3600, must-revalidate
 
 /app.js
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=3600, must-revalidate
 
 /.well-known/security.txt
   Content-Type: text/plain; charset=utf-8

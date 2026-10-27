@@ -5,11 +5,12 @@ Site da ZoraS — auditoria de segurança (VibeGuard) e assistentes de WhatsApp 
 ## Estrutura
 
 ```
-public/           o site; é esta pasta que as Pages publicam
-  index.html
-  style.css
-  app.js
-  _headers        cabeçalhos de segurança (HSTS, CSP, Permissions-Policy)
+index.html        o site (as Pages publicam a raiz do repositório)
+style.css
+app.js
+_headers          cabeçalhos de segurança (HSTS, CSP, Permissions-Policy) e cache
+.well-known/      security.txt
+DNS-SEGURANCA.md  guia de DNS
 termux/           servir a partir do telemóvel, para testes
 ```
 
@@ -26,4 +27,4 @@ termux/           servir a partir do telemóvel, para testes
 
 ## Cuidado
 
-O `public/_headers` é o que aplica a segurança nas Pages. Não o apagues.
+O `_headers` é o que aplica a segurança nas Pages. Não o apagues.
