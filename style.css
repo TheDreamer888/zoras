@@ -333,3 +333,30 @@ footer { padding-block: 30px; color: var(--muted); font-size: 0.85rem; }
   .hero-grid, .contact-grid { grid-template-columns: 1fr; }
   .site-nav { order: 3; width: 100%; gap: 14px; }
 }
+
+/* ---------- utilitarios (substituem estilos inline, bloqueados pela CSP) ---------- */
+.sec-title { font-size: clamp(1.6rem, 3.6vw, 2.2rem); letter-spacing: -0.02em; }
+.sec-lede { margin-top: 12px; }
+.per { font-size: 0.8rem; font-weight: 500; }
+.copy-start { justify-self: start; }
+
+/* ---------- landing pages de anuncios (vibeguard.html, zapagent.html) ---------- */
+.lp-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 26px; padding: 0; list-style: none; counter-reset: step; }
+.lp-steps li { border: 1px solid var(--line); border-radius: 4px; background: var(--surface); padding: 18px; counter-increment: step; }
+.lp-steps li::before { content: "0" counter(step); display: block; font: 500 0.75rem/1 var(--mono); letter-spacing: 0.1em; color: var(--accent); margin-bottom: 10px; }
+.lp-steps strong { display: block; font-family: var(--display); font-size: 1.05rem; margin-bottom: 4px; }
+.lp-steps p { color: var(--muted); font-size: 0.93rem; }
+.lp-offer { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: center; margin-top: 24px; border: 1px solid var(--ochre); border-radius: 4px; background: var(--ochre-soft); padding: 22px; }
+.lp-offer .big { font-family: var(--display); font-weight: 800; font-size: clamp(2rem, 5vw, 2.6rem); color: var(--ochre); line-height: 1; font-variant-numeric: tabular-nums; }
+.lp-offer .big small { font-size: 0.95rem; font-weight: 500; }
+.lp-offer p { color: var(--fg); margin-top: 6px; }
+.lp-faq { margin-top: 22px; display: grid; gap: 10px; }
+.lp-faq details { border: 1px solid var(--line); border-radius: 4px; background: var(--surface); padding: 14px 16px; }
+.lp-faq summary { cursor: pointer; font-weight: 600; }
+.lp-faq details p { color: var(--muted); margin-top: 8px; }
+.lp-cta { text-align: center; }
+.lp-cta .hero-actions { justify-content: center; }
+@media (max-width: 760px) {
+  .lp-steps { grid-template-columns: 1fr; }
+  .lp-offer { grid-template-columns: 1fr; }
+}

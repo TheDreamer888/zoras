@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VibeGuard — ZoraS</title>
+<meta name="description" content="Fizeste a app com IA? Auditoria de segurança por 24,90 €: chaves expostas, SQL injection, XSS, TLS e JWT. Relatório em 3 dias úteis.">
+<meta property="og:title" content="A IA escreveu o teu código. Quem verificou a segurança?">
+<meta property="og:description" content="Auditoria VibeGuard: 24,90 €, relatório com correções em 3 dias úteis.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="/">
+      <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2.2 3.6 5.6v6.1c0 5 3.6 8.8 8.4 10.1 4.8-1.3 8.4-5.1 8.4-10.1V5.6Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"></path>
+        <path d="M8.6 9.3h6.8l-6.8 5.4h6.8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      ZoraS
+    </a>
+    <a class="btn" href="/?s=vibeguard#contacto">Pedir auditoria</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">VibeGuard · auditoria de segurança</span>
+        <h1>A IA escreveu o teu código. Quem verificou a segurança?</h1>
+        <p class="lede">Cursor, Lovable, Bolt e ChatGPT fazem uma app num fim de semana, mas deixam chaves de API à vista, consultas vulneráveis e logins fáceis de contornar. Encontro esses buracos antes de outra pessoa os encontrar.</p>
+        <div class="hero-actions">
+          <a class="btn" href="/?s=vibeguard#contacto">Pedir auditoria · 24,90 €</a>
+          <a class="btn ghost" href="#como">Como funciona</a>
+        </div>
+      </div>
+      <div class="scan" aria-hidden="true">
+        <div class="scan-head"><span>vibeguard --scan</span><span>exemplo</span></div>
+        <div class="scan-row"><span class="k">api keys exposed</span><span class="v flag">2 found</span></div>
+        <div class="scan-row"><span class="k">sql injection</span><span class="v">0</span></div>
+        <div class="scan-row"><span class="k">xss</span><span class="v flag">1 found</span></div>
+        <div class="scan-row"><span class="k">tls config</span><span class="v">ok</span></div>
+        <div class="scan-row"><span class="k">jwt verification</span><span class="v flag">weak</span></div>
+        <div class="scan-row"><span class="k">report</span><span class="v">3 days</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap band">
+      <span class="eyebrow">O que verifico</span>
+      <h2 class="sec-title">Os erros que a IA comete mais vezes.</h2>
+      <div class="svc-grid">
+        <article class="svc">
+          <h3>Segredos e acessos</h3>
+          <ul>
+            <li>Chaves de API, tokens e passwords no código ou no browser</li>
+            <li>Autenticação JWT mal verificada</li>
+            <li>Rotas de administração sem proteção</li>
+          </ul>
+        </article>
+        <article class="svc">
+          <h3>Ataques comuns</h3>
+          <ul>
+            <li>SQL injection e XSS</li>
+            <li>TLS desativado ou mal configurado</li>
+            <li>Dependências com vulnerabilidades conhecidas</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="como">
+    <div class="wrap band">
+      <span class="eyebrow">Como funciona</span>
+      <h2 class="sec-title">Três passos, três dias úteis.</h2>
+      <ol class="lp-steps">
+        <li><strong>Envias o acesso</strong><p>Repositório, link da app ou os dois. Só leitura.</p></li>
+        <li><strong>Eu audito</strong><p>Análise manual e automática de cada ponto da lista.</p></li>
+        <li><strong>Recebes o relatório</strong><p>Cada problema com a correção, mais uma chamada de 30 minutos.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap band">
+      <span class="eyebrow">Preço</span>
+      <h2 class="sec-title">Menos do que um jantar fora.</h2>
+      <div class="lp-offer">
+        <div>
+          <div class="big">24,90 €</div>
+          <p>Auditoria completa, uma vez. Se não for possível fazer o trabalho, devolvo o valor na totalidade. O teu código é apagado após a entrega.</p>
+        </div>
+        <a class="btn" href="/?s=vibeguard#contacto">Pedir auditoria</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap band">
+      <span class="eyebrow">Perguntas</span>
+      <h2 class="sec-title">Antes de pedires.</h2>
+      <div class="lp-faq">
+        <details><summary>Preciso de saber programar?</summary><p>Não. O relatório explica cada problema em linguagem simples, e a correção vem pronta a colar no Cursor, Lovable ou Bolt.</p></details>
+        <details><summary>Que tipo de apps auditas?</summary><p>Sites e apps web feitos com IA: Next.js, React, Supabase, Firebase, Node, Python. Se a tua stack for diferente, digo-te logo antes de pagares.</p></details>
+        <details><summary>O meu código fica guardado?</summary><p>Não. É apagado depois da entrega do relatório.</p></details>
+        <details><summary>E se encontrares problemas graves?</summary><p>Ficam no topo do relatório, marcados como urgentes, com a correção explicada passo a passo na chamada.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="wrap band lp-cta">
+      <h2 class="sec-title">Lança com a certeza de que não deixaste a porta aberta.</h2>
+      <div class="hero-actions"><a class="btn" href="/?s=vibeguard#contacto">Pedir auditoria · 24,90 €</a></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot-row">
+      <span>ZoraS · Lisboa, Portugal</span>
+      <a href="/">Voltar ao site</a>
+    </div>
+  </footer>
+</main>
+</body>
+</html>

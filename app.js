@@ -68,6 +68,13 @@
   var out = document.getElementById("f-out");
   var copyMsg = document.getElementById("copy-msg");
 
+  /* ?s=vibeguard|zapagent vindo das landing pages pre-seleciona o servico */
+  var pre = new URLSearchParams(location.search).get("s");
+  var svcSel = document.getElementById("f-service");
+  if (pre && svcSel.querySelector('option[value="' + pre.replace(/[^a-z]/g, "") + '"]')) {
+    svcSel.value = pre;
+  }
+
   var SERVICE_LABEL = {
     vibeguard: ["VibeGuard — auditoria de segurança", "VibeGuard — security audit"],
     zapagent: ["ZapAgent — assistente de WhatsApp", "ZapAgent — WhatsApp assistant"],
