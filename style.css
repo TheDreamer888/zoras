@@ -360,3 +360,6 @@ footer { padding-block: 30px; color: var(--muted); font-size: 0.85rem; }
   .lp-steps { grid-template-columns: 1fr; }
   .lp-offer { grid-template-columns: 1fr; }
 }
+
+/* campo-isco anti-spam do formulário */
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}

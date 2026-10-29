@@ -109,6 +109,32 @@
       return;
     }
 
+    var trap = document.getElementById("f-website");
+    var submitBtn = document.getElementById("f-submit");
+    submitBtn.disabled = true;
+    say("", "A enviar…", "Sending…");
+
+    /* 1.º tenta enviar direto (/api/lead); se falhar, prepara a mensagem para copiar como antes */
+    fetch("/api/lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name: name, email: email, service: service, message: message,
+        lang: en ? "en" : "pt", website: trap ? trap.value : "", source: location.search.slice(0, 200) })
+    }).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      submitBtn.disabled = false;
+      form.reset();
+      outWrap.hidden = true;
+      say("ok",
+        "Pedido enviado. Respondo para " + email + " em 24 horas úteis.",
+        "Request sent. I'll reply to " + email + " within 24 business hours.");
+    }).catch(function () {
+      submitBtn.disabled = false;
+      prepare(name, email, service, message, en);
+    });
+  });
+
+  function prepare(name, email, service, message, en) {
     var label = (SERVICE_LABEL[service] || SERVICE_LABEL.outro)[en ? 1 : 0];
     var body = en
       ? ["Hello ZoraS,", "", "Service: " + label, "Name: " + name,
@@ -137,7 +163,7 @@
     } else {
       tell(false);
     }
-  });
+  }
 
   copyMsg.addEventListener("click", function () {
     var en = isEnglish();

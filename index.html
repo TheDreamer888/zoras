@@ -235,7 +235,11 @@
                     data-en-ph="What you have built and where you need help."
                     placeholder="O que tens construído e onde precisas de ajuda."></textarea>
         </div>
-        <button class="btn" type="submit" id="f-submit" data-pt="Preparar mensagem" data-en="Prepare message">Preparar mensagem</button>
+        <div class="hp" aria-hidden="true">
+          <label for="f-website">Website</label>
+          <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <button class="btn" type="submit" id="f-submit" data-pt="Enviar pedido" data-en="Send request">Enviar pedido</button>
         <p class="status" id="f-status" hidden></p>
 
         <div class="field" id="f-out-wrap" hidden>
