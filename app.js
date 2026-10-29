@@ -78,7 +78,10 @@
   var SERVICE_LABEL = {
     vibeguard: ["VibeGuard — auditoria de segurança", "VibeGuard — security audit"],
     zapagent: ["ZapAgent — assistente de WhatsApp", "ZapAgent — WhatsApp assistant"],
-    ambos: ["Os dois serviços", "Both services"],
+    faturai: ["FaturAI — faturas PDF para Excel", "FaturAI — PDF invoices to Excel"],
+    conformia: ["ConformIA — AI Act e RGPD", "ConformIA — AI Act and GDPR"],
+    tokengate: ["TokenGate — gateway de IA", "TokenGate — AI gateway"],
+    ambos: ["Mais do que um serviço", "More than one service"],
     outro: ["Outro assunto", "Something else"]
   };
 

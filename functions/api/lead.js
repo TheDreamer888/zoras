@@ -1,6 +1,6 @@
 // POST /api/lead: guarda um pedido do formulário de contacto na D1 (binding LEADS).
 // Sem o binding responde 503 e o app.js volta ao método antigo (copiar e enviar por email).
-const SERVICES = ["vibeguard", "zapagent", "ambos", "outro"];
+const SERVICES = ["vibeguard", "zapagent", "faturai", "conformia", "tokengate", "ambos", "outro"];
 
 function bad(status, error) {
   return Response.json({ ok: false, error }, { status, headers: { "Cache-Control": "no-store" } });
