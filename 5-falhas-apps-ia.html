@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>5 falhas de segurança em apps feitas com IA · ZoraS</title>
+<meta name="description" content="Chaves de API no browser, Supabase sem RLS, rotas sem autenticação, JWT mal verificado e CORS aberto. As 5 falhas mais comuns em apps feitas com Cursor, Lovable e Bolt, e como as verificas tu mesmo.">
+<link rel="canonical" href="https://zorastech.com/5-falhas-apps-ia">
+<meta property="og:title" content="5 falhas de segurança em apps feitas com IA">
+<meta property="og:description" content="E como as verificas tu mesmo em 10 minutos.">
+<meta property="og:url" content="https://zorastech.com/5-falhas-apps-ia">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://zorastech.com/img/og-falhas.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Manrope:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/lancamento.css">
+</head>
+<body>
+<div class="wrap article">
+  <header class="hero">
+    <div class="glow" aria-hidden="true"></div>
+    <a class="tag" href="/lancamento"><i></i>ZoraS · Guia</a>
+    <h1>5 falhas em apps <em>feitas com IA</em></h1>
+    <p class="lede">O Cursor, o Lovable, o Bolt e o ChatGPT põem uma app no ar numa tarde. As mesmas cinco falhas aparecem vezes sem conta. Para cada uma tens aqui como a verificar tu mesmo, sem ferramentas pagas.</p>
+  </header>
+
+  <section>
+    <p class="eyebrow">Falha 1</p>
+    <h2>A chave da API vai parar ao browser</h2>
+    <p>Variáveis com o prefixo <code>NEXT_PUBLIC_</code>, <code>VITE_</code> ou <code>REACT_APP_</code> são copiadas para o JavaScript que qualquer visitante descarrega. Se a chave da OpenAI ou a <code>sk_live</code> da Stripe tiver esse prefixo, está pública.</p>
+    <p><strong>Verifica:</strong> abre a tua app, carrega em F12, vai a <em>Sources</em> e procura (Ctrl+Shift+F) por <code>sk-</code>, <code>sk_live</code> e <code>secret</code>. Se encontrares alguma, revoga-a já e passa a chamada para o servidor.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">Falha 2</p>
+    <h2>Supabase ou Firebase sem regras de acesso</h2>
+    <p>A chave <code>anon</code> do Supabase pode ser pública, mas só se o Row Level Security estiver ligado em todas as tabelas. Sem RLS, qualquer pessoa lê e apaga os dados de todos os utilizadores com essa chave.</p>
+    <p><strong>Verifica:</strong> no painel do Supabase, em <em>Authentication → Policies</em>, todas as tabelas devem dizer "RLS enabled" e ter pelo menos uma política. No Firebase, procura por <code>allow read, write: if true</code> nas regras.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">Falha 3</p>
+    <h2>A proteção existe só no ecrã</h2>
+    <p>A IA esconde o botão "Admin" a quem não é administrador, mas a rota <code>/api/admin</code> continua a responder a qualquer pedido. Esconder no ecrã não é proteger.</p>
+    <p><strong>Verifica:</strong> termina a sessão e abre diretamente os endereços das tuas rotas de API no browser ou com <code>curl</code>. Se alguma devolver dados, falta a verificação do lado do servidor.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">Falha 4</p>
+    <h2>O JWT é lido mas não é verificado</h2>
+    <p>É comum o código gerado usar <code>jwt.decode()</code> em vez de <code>jwt.verify()</code>, ou assinar com um segredo como <code>"secret"</code>. Assim, qualquer pessoa fabrica um token com <code>"role": "admin"</code>.</p>
+    <p><strong>Verifica:</strong> procura no código por <code>decode(</code> junto de tokens e pelo valor de <code>JWT_SECRET</code>. Deve ter pelo menos 32 caracteres aleatórios e nunca estar no repositório.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">Falha 5</p>
+    <h2>CORS aberto e nenhum limite de pedidos</h2>
+    <p><code>Access-Control-Allow-Origin: *</code> numa API com sessão, e nenhum limite de pedidos no login ou nas rotas que chamam a IA. Um robô pode testar milhares de passwords, ou gastar o teu saldo da OpenAI numa noite.</p>
+    <p><strong>Verifica:</strong> no F12, em <em>Network</em>, abre um pedido à tua API e lê os cabeçalhos da resposta. Depois tenta o login errado 20 vezes seguidas: se nunca fores travado, não há limite.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">Queres que eu verifique por ti?</p>
+    <h2>VibeGuard: as 5 e mais, por 24,90 €.</h2>
+    <p class="sub">Verifico chaves expostas, SQL injection, XSS, TLS, JWT e dependências. Recebes um relatório com a correção de cada problema em 3 dias úteis. Se o trabalho não for possível, devolvo o valor.</p>
+    <div class="ctas">
+      <a class="btn main" href="/?s=vibeguard&amp;utm_source=artigo&amp;utm_medium=organic&amp;utm_campaign=5falhas#contacto">Pedir auditoria · 24,90 €</a>
+      <a class="btn" href="/lancamento">Ver todos os produtos</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>ZoraS · Lisboa, Portugal</span>
+    <a href="https://github.com/TheDreamer888">github.com/TheDreamer888</a>
+  </footer>
+</div>
+</body>
+</html>

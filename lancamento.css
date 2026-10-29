@@ -78,3 +78,10 @@ blockquote cite{display:block;font:500 13px var(--mono);color:var(--gold);margin
 
 footer{padding-block:36px 48px;border-top:1px solid var(--line);color:var(--mute);font-size:14px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
 @media (prefers-reduced-motion:reduce){.glow,.cursor{animation:none}}
+
+/* Artigo */
+.article section p{max-width:68ch;margin:0 0 14px;color:var(--fg)}
+.article section p.sub{color:var(--mute)}
+.article code{font:14px var(--mono);background:var(--panel);border:1px solid var(--line);padding:1px 6px;border-radius:5px;color:var(--gold)}
+.article a.tag{text-decoration:none}
+.article strong{color:var(--gold)}
