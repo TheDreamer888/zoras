@@ -27,3 +27,9 @@
 
 /zapagent.html
   Cache-Control: no-cache
+
+/lancamento.html
+  Cache-Control: no-cache
+
+/lancamento.css
+  Cache-Control: public, max-age=3600, must-revalidate

@@ -1,0 +1,80 @@
+/* Layout: lançamento estilo laboratório de IA — um herói escuro com "luz" dourada a nascer, depois grelhas de produto e de código */
+:root{
+  --ink:#0d0f1a; --panel:#151829; --line:#272b45; --fg:#ecebf5; --mute:#9a9cb8;
+  --gold:#f2c35b; --dawn:#ff8a5b; --sky:#7d8cff;
+  --display:"Syne","Avenir Next",system-ui,sans-serif;
+  --body:"Manrope","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--ink);color:var(--fg);font:16px/1.6 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto}
+
+/* Herói */
+.hero{position:relative;padding-block:72px 56px;overflow:hidden}
+.glow{position:absolute;left:50%;top:-40%;width:min(900px,160vw);aspect-ratio:1;max-width:none;transform:translateX(-50%);
+  background:radial-gradient(circle at 50% 60%,color-mix(in srgb,var(--gold) 38%,transparent) 0,color-mix(in srgb,var(--dawn) 18%,transparent) 28%,transparent 60%);
+  filter:blur(10px);pointer-events:none;animation:rise 6s ease-out both}
+@keyframes rise{from{opacity:.45;transform:translateX(-50%) translateY(60px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+.hero>*{position:relative}
+.tag{display:inline-flex;gap:10px;align-items:center;font:500 13px var(--mono);color:var(--gold);
+  border:1px solid color-mix(in srgb,var(--gold) 40%,transparent);padding:6px 12px;border-radius:999px;letter-spacing:.04em}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold)}
+h1{font:800 clamp(40px,8vw,92px)/.98 var(--display);letter-spacing:-.03em;margin:22px 0 18px;text-wrap:balance}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--gold),var(--dawn));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{font-size:clamp(17px,2.2vw,21px);color:var(--mute);max-width:60ch;margin:0}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 15px var(--body);text-decoration:none;padding:13px 20px;border-radius:10px;border:1px solid var(--line)}
+.btn.main{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.btn.main:hover{background:color-mix(in srgb,var(--gold) 85%,white)}
+.btn:not(.main):hover{border-color:var(--mute)}
+
+/* Consola */
+.term{margin-top:44px;background:color-mix(in srgb,var(--panel) 85%,transparent);border:1px solid var(--line);border-radius:14px;
+  font:14px/1.9 var(--mono);padding:18px 20px;max-width:640px;backdrop-filter:blur(6px)}
+.term .p{color:var(--mute)} .term .ok{color:var(--gold)} .term .w{color:var(--dawn)}
+.term div{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.cursor{display:inline-block;width:8px;height:1em;background:var(--gold);vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+section{padding-block:56px;border-top:1px solid var(--line)}
+.eyebrow{font:500 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+h2{font:700 clamp(28px,4.4vw,44px)/1.08 var(--display);letter-spacing:-.02em;margin:0 0 12px;text-wrap:balance}
+.sub{color:var(--mute);max-width:62ch;margin:0 0 30px}
+
+/* Produtos */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card h3{font:700 22px var(--display);margin:0;letter-spacing:-.01em}
+.card p{margin:0;color:var(--mute);font-size:15px}
+.meta{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding-top:12px;border-top:1px dashed var(--line)}
+.price{font:500 17px var(--mono);font-variant-numeric:tabular-nums;color:var(--fg)}
+.price small{color:var(--mute);font-size:12px}
+.pill{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:999px;white-space:nowrap}
+.pill.live{background:color-mix(in srgb,var(--gold) 18%,transparent);color:var(--gold)}
+.pill.soon{background:color-mix(in srgb,var(--sky) 18%,transparent);color:var(--sky)}
+.card a.more{font:600 14px var(--body);color:var(--gold);text-decoration:none}
+.card a.more:hover{text-decoration:underline}
+.brand{font:500 12px var(--mono);color:var(--mute);letter-spacing:.08em;text-transform:uppercase}
+
+/* Repositórios */
+.repos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.repo{display:flex;gap:14px;align-items:flex-start;text-decoration:none;padding:16px 18px;border:1px solid var(--line);border-radius:12px;min-width:0}
+.repo:hover{border-color:var(--gold)}
+.repo b{font:500 15px var(--mono);color:var(--fg);display:block;overflow-wrap:anywhere}
+.repo span{color:var(--mute);font-size:14px}
+.repo .lang{font:500 11px var(--mono);color:var(--sky);flex:none;padding-top:3px;width:58px}
+
+/* Promessa */
+.promise{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.promise h4{font:700 18px var(--display);margin:0 0 6px}
+.promise p{margin:0;color:var(--mute);font-size:15px}
+blockquote{margin:40px 0 0;padding:0;font:600 clamp(20px,3vw,28px)/1.3 var(--display);max-width:30ch;text-wrap:balance}
+blockquote cite{display:block;font:500 13px var(--mono);color:var(--gold);margin-top:10px;font-style:normal}
+
+footer{padding-block:36px 48px;border-top:1px solid var(--line);color:var(--mute);font-size:14px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+@media (prefers-reduced-motion:reduce){.glow,.cursor{animation:none}}
